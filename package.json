@@ -1,0 +1,60 @@
+{
+  "name": "web-app",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "12.13.0"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "firebase": "^8.9.1",
+    "lodash": "^4.17.21",
+    "mdbreact": "^5.1.0",
+    "react": "^17.0.2",
+    "react-bootstrap-validation": "^0.1.11",
+    "react-dom": "^17.0.2",
+    "react-modal-login": "^1.4.5",
+    "react-owl-carousel": "^2.3.3",
+    "react-query": "^3.23.1",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "redux": "^4.1.1",
+    "serve": "^12.0.1",
+    "sweetalert": "^2.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "globals": {
+      "_": true
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "url-loader": "^4.1.1"
+  }
+}

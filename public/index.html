@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/easyrishta/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="shortcut icon" href="assets/images/SG-Logo-Square.png" />
+    <link href="assets/css/register-wizard-style.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="assets/css/mega-menu/mega_menu.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/flaticon.css" rel="stylesheet" />
+    <link
+      href="assets/css/magnific-popup/magnific-popup.css"
+      rel="stylesheet"
+    />
+    <link href="assets/css/owl-carousel/owl.carousel.css" rel="stylesheet" />
+    <link href="assets/css/general.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/skins/skin-ruby.css"
+      data-style="styles"
+    />
+    <link rel="stylesheet" href="assets/css/ken-burns.css" />
+    <link rel="shortcut icon" href="dist/img/SG-Logo-Square.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.3/collection/components/icon/icon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/css/adminlte.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
+      rel="stylesheet"
+    />
+    <style>
+      .carousel .carousel-indicators {
+        top: 82%;
+      }
+      .carousel .carousel-indicators li {
+        width: 14px;
+        height: 14px;
+        background-color: #ff503e;
+        border-radius: 50%;
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+      }
+      .carousel .carousel-indicators li.active {
+        width: 18px;
+        height: 18px;
+        border: 2px solid #fff;
+        transform: translateY(-2px);
+      }
+      .card--payment .card-header {
+        background-color: #c02567;
+        color: #fff;
+      }
+      .payment-card-radios {
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .payment-card-radios > div {
+        margin-top: 20px;
+        margin-bottom: 15px;
+      }
+      .payment-card-radios input[type="radio"] {
+        display: none;
+      }
+      .payment-card-radios input[type="radio"]:not(:disabled) ~ label {
+        cursor: pointer;
+      }
+      .payment-card-radios input[type="radio"]:disabled ~ label {
+        color: #bcc2bf;
+        border-color: #bcc2bf;
+        box-shadow: none;
+        cursor: not-allowed;
+      }
+      .payment-card-radios label {
+        height: 100%;
+        display: block;
+        background: #fff;
+        border: 2px solid #1fdf7f;
+        border-radius: 20px;
+        padding: 1rem 0 4px;
+        margin-bottom: 1rem;
+        text-align: center;
+        box-shadow: 0 3px 10px -2px hsla(150, 5%, 65%, 0.5);
+        position: relative;
+      }
+      .payment-card-radios label.premium {
+        border: 2px solid orange;
+      }
+      .payment-card-radios label.premium .badge {
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+      }
+      .payment-card-radios input[type="radio"]:checked + label {
+        background: #1fdf7f;
+        color: #fff;
+        box-shadow: 0 0 20px hsla(150, 100%, 50%, 0.75);
+      }
+      .payment-card-radios input[type="radio"]:checked + label.premium {
+        background: orange;
+        color: #fff;
+        box-shadow: 0 0 20px orange;
+      }
+      .payment-card-radios input[type="radio"]:checked + label::after {
+        color: #3c3f42;
+        font-family: FontAwesome;
+        border: 2px solid #1cc872;
+        content: "\f00c";
+        font-size: 24px;
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 2px 5px -2px hsla(0, 0%, 0%, 0.25);
+      }
+      .payment-card-radios input[type="radio"]#control_05:checked + label {
+        background: red;
+        border-color: red;
+      }
+      .payment-card-radios p {
+        font-weight: 500;
+        margin-bottom: 2px;
+      }
+      .payment-card-radios.payment-card-radios--methods label {
+        height: 140px;
+        width: 140px;
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 10px solid #a9a9a9;
+      }
+      .payment-card-radios--methods label + h2 {
+        text-align: center;
+      }
+      .payment-card-radios--methods label.easy_paisa {
+        background: url(dist/img/payment/easy-paisa.jpg);
+        background-size: 100% 100%;
+      }
+      .payment-card-radios--methods label.meezan_bank {
+        background: url(dist/img/payment/meezan-bank.jpg);
+        background-size: 100% 100%;
+      }
+      .payment-card-radios--methods label.jazz-cash {
+        background: url(dist/img/payment/jazz-cash.jpg);
+        background-size: 100% 100%;
+      }
+      .payment-card-radios--methods label.cards {
+        background: url(dist/img/payment/cards.png);
+        background-size: 100% 100%;
+      }
+      .payment-card-radios--methods
+        input[type="radio"]:checked
+        + label.meezan_bank {
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url(/assets/dist/img/payment/meezan-bank.jpg);
+        background-size: 100%;
+      }
+      .payment-card-radios--methods
+        input[type="radio"]:checked
+        + label.easy_paisa {
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url(assets/dist/img/payment/easy-paisa.jpg);
+        background-size: 100%;
+      }
+      .payment-card-radios--methods
+        input[type="radio"]:checked
+        + label.jazz-cash {
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url(/assets/dist/img/payment/jazz-cash.jpg);
+        background-size: 100%;
+      }
+      .payment-card-radios--methods input[type="radio"]:checked + label.cards {
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url(assets/dist/img/payment/cards.png);
+        background-size: 100%;
+      }
+      .payment-card-radios--methods input[type="radio"]:checked + label {
+        border: 10px solid #1fdf7f;
+      }
+      .payment-card-radios--methods input[type="radio"]:checked + label::after {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 46px;
+        color: #fff;
+        background: 0 0;
+        border: none;
+        font-weight: 400;
+      }
+      .payment-card-radios--methods label {
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .payment-card-radios .price {
+        font-weight: 600;
+        background-size: 100% 100%;
+      }
+      @media only screen and (max-width: 700px) {
+        .payment-card-radios {
+          flex-direction: column;
+        }
+        .payment-card-radios > div {
+          width: 100%;
+        }
+      }
+      @media only screen and (min-width: 992px) {
+        .addon-section {
+          border-left: 1px solid #d3d3d3;
+        }
+      }
+      .addon {
+        border: 2px dotted #d3d3d3;
+        padding: 6px 16px;
+        border-radius: 12px;
+        margin: 10px 18px;
+      }
+      .addon .price {
+        margin: 5px 0;
+        font-weight: 500;
+      }
+      .addon-detail {
+        margin: 0;
+      }
+    </style>
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.4.1/jquery.appear.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mmenu-js/8.5.24/mmenu.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.1.0/jquery.countTo.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+    ></script>
+
+    <link rel="apple-touch-icon" href="/easyrishta/logo192.png/" />
+    <link href="/manifest.json" rel="manifest" />
+    <title>React App</title>
+    <!-- <link href="/easyrishta/static/css/2.6cc25a89.chunk.css" rel="stylesheet" />
+    <link
+      href="/easyrishta/static/css/main.32cb4065.chunk.css"
+      rel="stylesheet"
+    /> -->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script>
+      !(function (e) {
+        function r(r) {
+          for (
+            var n, a, i = r[0], c = r[1], l = r[2], p = 0, s = [];
+            p < i.length;
+            p++
+          )
+            (a = i[p]),
+              Object.prototype.hasOwnProperty.call(o, a) &&
+                o[a] &&
+                s.push(o[a][0]),
+              (o[a] = 0);
+          for (n in c)
+            Object.prototype.hasOwnProperty.call(c, n) && (e[n] = c[n]);
+          for (f && f(r); s.length; ) s.shift()();
+          return u.push.apply(u, l || []), t();
+        }
+        function t() {
+          for (var e, r = 0; r < u.length; r++) {
+            for (var t = u[r], n = !0, i = 1; i < t.length; i++) {
+              var c = t[i];
+              0 !== o[c] && (n = !1);
+            }
+            n && (u.splice(r--, 1), (e = a((a.s = t[0]))));
+          }
+          return e;
+        }
+        var n = {},
+          o = { 1: 0 },
+          u = [];
+        function a(r) {
+          if (n[r]) return n[r].exports;
+          var t = (n[r] = { i: r, l: !1, exports: {} });
+          return e[r].call(t.exports, t, t.exports, a), (t.l = !0), t.exports;
+        }
+        (a.e = function (e) {
+          var r = [],
+            t = o[e];
+          if (0 !== t)
+            if (t) r.push(t[2]);
+            else {
+              var n = new Promise(function (r, n) {
+                t = o[e] = [r, n];
+              });
+              r.push((t[2] = n));
+              var u,
+                i = document.createElement("script");
+              (i.charset = "utf-8"),
+                (i.timeout = 120),
+                a.nc && i.setAttribute("nonce", a.nc),
+                (i.src = (function (e) {
+                  return (
+                    a.p +
+                    "static/js/" +
+                    ({}[e] || e) +
+                    "." +
+                    { 3: "b8fd252b" }[e] +
+                    ".chunk.js"
+                  );
+                })(e));
+              var c = new Error();
+              u = function (r) {
+                (i.onerror = i.onload = null), clearTimeout(l);
+                var t = o[e];
+                if (0 !== t) {
+                  if (t) {
+                    var n = r && ("load" === r.type ? "missing" : r.type),
+                      u = r && r.target && r.target.src;
+                    (c.message =
+                      "Loading chunk " +
+                      e +
+                      " failed.\n(" +
+                      n +
+                      ": " +
+                      u +
+                      ")"),
+                      (c.name = "ChunkLoadError"),
+                      (c.type = n),
+                      (c.request = u),
+                      t[1](c);
+                  }
+                  o[e] = void 0;
+                }
+              };
+              var l = setTimeout(function () {
+                u({ type: "timeout", target: i });
+              }, 12e4);
+              (i.onerror = i.onload = u), document.head.appendChild(i);
+            }
+          return Promise.all(r);
+        }),
+          (a.m = e),
+          (a.c = n),
+          (a.d = function (e, r, t) {
+            a.o(e, r) ||
+              Object.defineProperty(e, r, { enumerable: !0, get: t });
+          }),
+          (a.r = function (e) {
+            "undefined" != typeof Symbol &&
+              Symbol.toStringTag &&
+              Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
+              Object.defineProperty(e, "__esModule", { value: !0 });
+          }),
+          (a.t = function (e, r) {
+            if ((1 & r && (e = a(e)), 8 & r)) return e;
+            if (4 & r && "object" == typeof e && e && e.__esModule) return e;
+            var t = Object.create(null);
+            if (
+              (a.r(t),
+              Object.defineProperty(t, "default", { enumerable: !0, value: e }),
+              2 & r && "string" != typeof e)
+            )
+              for (var n in e)
+                a.d(
+                  t,
+                  n,
+                  function (r) {
+                    return e[r];
+                  }.bind(null, n)
+                );
+            return t;
+          }),
+          (a.n = function (e) {
+            var r =
+              e && e.__esModule
+                ? function () {
+                    return e.default;
+                  }
+                : function () {
+                    return e;
+                  };
+            return a.d(r, "a", r), r;
+          }),
+          (a.o = function (e, r) {
+            return Object.prototype.hasOwnProperty.call(e, r);
+          }),
+          (a.p = "/easyrishta/"),
+          (a.oe = function (e) {
+            throw (console.error(e), e);
+          });
+        var i = (this["webpackJsonpweb-app"] =
+            this["webpackJsonpweb-app"] || []),
+          c = i.push.bind(i);
+        (i.push = r), (i = i.slice());
+        for (var l = 0; l < i.length; l++) r(i[l]);
+        var f = c;
+        t();
+      })([]);
+    </script>
+
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+  </body>
+</html>
