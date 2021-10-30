@@ -44,11 +44,11 @@ class Home extends React.Component {
 
   async onLogin() {
     console.log("__onLogin__");
-    console.log("email: " + document.querySelector("#email1").value);
-    console.log("password: " + document.querySelector("#password1").value);
+    console.log("email: " + document.querySelector("#email").value);
+    console.log("password: " + document.querySelector("#password").value);
     this.setState({ loading: true });
-    const email = document.querySelector("#email1").value;
-    const password = document.querySelector("#password1").value;
+    const email = document.querySelector("#email").value;
+    const password = document.querySelector("#password").value;
     await auth.signInWithEmailAndPassword(email, password);
     console.log(auth.currentUser);
     db.collection("users")
@@ -83,12 +83,12 @@ class Home extends React.Component {
   async onRegister() {
     console.log("__onRegister__");
     // console.log("login: " + document.querySelector("#login").value);
-    console.log("email: " + document.querySelector("#email1").value);
-    console.log("password: " + document.querySelector("#password1").value);
+    console.log("email: " + document.querySelector("#email").value);
+    console.log("password: " + document.querySelector("#password").value);
 
     // const login = document.querySelector("#login").value;
-    const email = document.querySelector("#email1").value;
-    const password = document.querySelector("#password1").value;
+    const email = document.querySelector("#email").value;
+    const password = document.querySelector("#password").value;
 
     if (!email || !password) {
       this.setState({
@@ -151,9 +151,9 @@ class Home extends React.Component {
 
   onRecoverPassword() {
     console.log("__onFotgottenPassword__");
-    console.log("email: " + document.querySelector("#email1").value);
+    console.log("email: " + document.querySelector("#email").value);
 
-    const email = document.querySelector("#email1").value;
+    const email = document.querySelector("#email").value;
 
     if (!email) {
       this.setState({
@@ -321,7 +321,7 @@ class Home extends React.Component {
                               label: "Email",
                               type: "email",
                               inputClass: "RML-form-control",
-                              id: "email1",
+                              id: "email",
                               name: "email",
                               placeholder: "Email",
                             },
@@ -330,7 +330,7 @@ class Home extends React.Component {
                               label: "Password",
                               type: "password",
                               inputClass: "RML-form-control",
-                              id: "password1",
+                              id: "password",
                               name: "password",
                               placeholder: "Password",
                             },
@@ -350,7 +350,7 @@ class Home extends React.Component {
                               label: "Email",
                               type: "email",
                               inputClass: "RML-form-control",
-                              id: "email1",
+                              id: "email",
                               name: "email",
                               placeholder: "Email",
                             },
@@ -359,7 +359,7 @@ class Home extends React.Component {
                               label: "Password",
                               type: "password",
                               inputClass: "RML-form-control",
-                              id: "password1",
+                              id: "password",
                               name: "password",
                               placeholder: "Password",
                             },
@@ -370,7 +370,7 @@ class Home extends React.Component {
                               label: "Email",
                               type: "email",
                               inputClass: "RML-form-control",
-                              id: "email1",
+                              id: "email",
                               name: "email",
                               placeholder: "Email",
                             },
@@ -1951,7 +1951,7 @@ footer --> */}
           </div>
         </footer>
         {/* <!--Register Modal --> */}
-        {/* <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header text-center">
@@ -1967,28 +1967,38 @@ footer --> */}
               </div>
               <div class="modal-body login-form">
                 <div class="login-1-form register-1-form clearfix">
-                  <form method="GET" id="user_modalRegisterForm1">
+                  <form method="GET" id="modalRegisterForm">
                     <div class="section-field">
                       <div class="field-widget">
                         <i class="glyph-icon flaticon-user"></i>
                         <input id="Username" required name="username" class="web" type="text" placeholder="User Name" />
                       </div>
                     </div>
-
+                    {/* <!-- <div class="section-field ">
+            <div class="field-widget"> <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              <input id="email" class="email" type="email" placeholder="Email" name="email">
+            </div>
+          </div> --> */}
                     <div class="section-field ">
                       <div class="field-widget">
                         <i style={{ transform: "translate(-4px ,-13px)" }} class="glyph-icon flaticon-padlock"></i>
-                        <input id="Password1" required class="Password" type="password" placeholder="Password" name="Password" />
+                        <input id="Password" required class="Password" type="password" placeholder="Password" name="Password" />
                       </div>
                     </div>
-
+                    {/* <!-- <div class="section-field ">
+            <div class="field-widget"> <i  style="transform: translate(-4px ,-13px);" class="glyph-icon flaticon-padlock"></i>
+              <input id="ConfirmPassword" class="Password" type="password" placeholder="Confirm Password"
+                name="Password">
+            </div>
+          </div> --> */}
 
                     <div class="row">
                       <div class="col-5 ">
                         <div class="section-field ">
                           <div class="field-widget">
                             <i class="fa fa-phone" aria-hidden="true"></i>
-                            <select name="code" id="code1" class="Password">
+                            {/* <!-- <input id="Collagename" class="web" type="text" placeholder="Code"> --> */}
+                            <select name="code" id="code" class="Password">
                               <option value="" selected="">
                                 Code
                               </option>
@@ -2255,7 +2265,8 @@ footer --> */}
                     <div class="section-field ">
                       <div class="field-widget">
                         <i class="fa fa-group" aria-hidden="true"></i>
-                        <select name="code" id="code1">
+                        {/* <!-- <input id="Collagename" class="web" type="text" placeholder="Code"> --> */}
+                        <select name="code" id="code">
                           <option selected="">Profile Created For</option>
                           <option value="1">Self</option>
                           <option value="2">Son or Daughter</option>
@@ -2267,6 +2278,16 @@ footer --> */}
                       </div>
                     </div>
 
+                    {/* <!-- <div class="section-field">
+              <div class="field-widget d-flex">
+
+                <input id="termsCheckbox" class="web" type="checkbox" />
+                <span>
+                    I agree to the Terms and Conditions
+                </span>
+
+              </div>
+            </div> --> */}
 
                     <div class="clearfix"></div>
                     <div class="section-field text-uppercase text-right mt-2">
@@ -2291,9 +2312,9 @@ footer --> */}
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
         {/* <!--Login Modal --> */}
-        {/* <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -2306,18 +2327,31 @@ footer --> */}
               </div>
               <div class="modal-body login-form">
                 <div class="login-1-form clearfix text-center">
-                  <form method="GET" id="user_modalRegisterForm1">
-
+                  <form method="GET" id="modalRegisterForm">
+                    {/* <div class="login-1-social mt-3 mb-3 text-center clearfix">
+                      <ul class="list-inline text-capitalize">
+                        <li>
+                          <a class="fb" href="www.google.com">
+                            <i class="fa fa-facebook"></i> Facebook
+                          </a>
+                        </li>
+                        <li>
+                          <a class="gplus" href="www.google.com">
+                            <i class="fa fa-google-plus"></i> google+
+                          </a>
+                        </li>
+                      </ul>
+                    </div> */}
                     <div class="section-field mb-2">
                       <div class="field-widget">
                         <i class="glyph-icon flaticon-user"></i>
-                        <input id="name1" class="web" type="text" placeholder="UserName / Email/ ID" name="web" />
+                        <input id="name" class="web" type="text" placeholder="UserName / Email/ ID" name="web" />
                       </div>
                     </div>
                     <div class="section-field mb-1">
                       <div class="field-widget">
                         <i class="glyph-icon flaticon-padlock"></i>
-                        <input id="Password1" class="Password" type="password" placeholder="Password" name="Password" />
+                        <input id="Password" class="Password" type="password" placeholder="Password" name="Password" />
                       </div>
                     </div>
                     <div class="section-field text-uppercase">
@@ -2348,8 +2382,9 @@ footer --> */}
               </div>
             </div>
           </div>
-        </div> */}
-        {/* <div class="modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-hidden="true">
+        </div>
+        {/* <!--Forgot Modal --> */}
+        <div class="modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -2367,7 +2402,7 @@ footer --> */}
                   <div class="section-field mb-2">
                     <div class="field-widget">
                       <i class="fa fa-envelope-o"></i>
-                      <input id="name1" class="web" type="text" placeholder="UserName / Email/ ID" name="web" />
+                      <input id="name" class="web" type="text" placeholder="UserName / Email/ ID" name="web" />
                     </div>
                   </div>
 
@@ -2380,6 +2415,7 @@ footer --> */}
                       </span>
                     </button>
                   </div>
+                  {/* <!-- <div class="section-field text-uppercase text-right mt-2"> <a class="button btn-sm btn-colored full-rounded animated right-icn"><span>submit<i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a> </div> --> */}
                   <div class="clearfix"></div>
 
                   <div class="section-field mt-2 text-center text-white">
@@ -2393,7 +2429,7 @@ footer --> */}
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     );
   }
