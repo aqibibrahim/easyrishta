@@ -44,11 +44,11 @@ class Home extends React.Component {
 
   async onLogin() {
     console.log("__onLogin__");
-    console.log("email: " + document.querySelector("#email").value);
-    console.log("password: " + document.querySelector("#password").value);
+    console.log("email: " + document.querySelector("#email1").value);
+    console.log("password: " + document.querySelector("#password1").value);
     this.setState({ loading: true });
-    const email = document.querySelector("#email").value;
-    const password = document.querySelector("#password").value;
+    const email = document.querySelector("#email1").value;
+    const password = document.querySelector("#password1").value;
     await auth.signInWithEmailAndPassword(email, password);
     console.log(auth.currentUser);
     db.collection("users")
@@ -83,12 +83,12 @@ class Home extends React.Component {
   async onRegister() {
     console.log("__onRegister__");
     // console.log("login: " + document.querySelector("#login").value);
-    console.log("email: " + document.querySelector("#email").value);
-    console.log("password: " + document.querySelector("#password").value);
+    console.log("email: " + document.querySelector("#email1").value);
+    console.log("password: " + document.querySelector("#password1").value);
 
     // const login = document.querySelector("#login").value;
-    const email = document.querySelector("#email").value;
-    const password = document.querySelector("#password").value;
+    const email = document.querySelector("#email1").value;
+    const password = document.querySelector("#password1").value;
 
     if (!email || !password) {
       this.setState({
@@ -151,9 +151,9 @@ class Home extends React.Component {
 
   onRecoverPassword() {
     console.log("__onFotgottenPassword__");
-    console.log("email: " + document.querySelector("#email").value);
+    console.log("email: " + document.querySelector("#email1").value);
 
-    const email = document.querySelector("#email").value;
+    const email = document.querySelector("#email1").value;
 
     if (!email) {
       this.setState({
@@ -321,7 +321,7 @@ class Home extends React.Component {
                               label: "Email",
                               type: "email",
                               inputClass: "RML-form-control",
-                              id: "email",
+                              id: "email1",
                               name: "email",
                               placeholder: "Email",
                             },
@@ -330,7 +330,7 @@ class Home extends React.Component {
                               label: "Password",
                               type: "password",
                               inputClass: "RML-form-control",
-                              id: "password",
+                              id: "password1",
                               name: "password",
                               placeholder: "Password",
                             },
@@ -350,7 +350,7 @@ class Home extends React.Component {
                               label: "Email",
                               type: "email",
                               inputClass: "RML-form-control",
-                              id: "email",
+                              id: "email1",
                               name: "email",
                               placeholder: "Email",
                             },
@@ -359,7 +359,7 @@ class Home extends React.Component {
                               label: "Password",
                               type: "password",
                               inputClass: "RML-form-control",
-                              id: "password",
+                              id: "password1",
                               name: "password",
                               placeholder: "Password",
                             },
@@ -370,7 +370,7 @@ class Home extends React.Component {
                               label: "Email",
                               type: "email",
                               inputClass: "RML-form-control",
-                              id: "email",
+                              id: "email1",
                               name: "email",
                               placeholder: "Email",
                             },
@@ -1967,7 +1967,7 @@ footer --> */}
               </div>
               <div class="modal-body login-form">
                 <div class="login-1-form register-1-form clearfix">
-                  <form method="GET" id="modalRegisterForm">
+                  <form method="GET" id="modalRegisterForm1">
                     <div class="section-field">
                       <div class="field-widget">
                         <i class="glyph-icon flaticon-user"></i>
@@ -1982,7 +1982,7 @@ footer --> */}
                     <div class="section-field ">
                       <div class="field-widget">
                         <i style={{ transform: "translate(-4px ,-13px)" }} class="glyph-icon flaticon-padlock"></i>
-                        <input id="Password" required class="Password" type="password" placeholder="Password" name="Password" />
+                        <input id="Password1" required class="Password" type="password" placeholder="Password" name="Password" />
                       </div>
                     </div>
                     {/* <!-- <div class="section-field ">
@@ -1998,7 +1998,7 @@ footer --> */}
                           <div class="field-widget">
                             <i class="fa fa-phone" aria-hidden="true"></i>
                             {/* <!-- <input id="Collagename" class="web" type="text" placeholder="Code"> --> */}
-                            <select name="code" id="code" class="Password">
+                            <select name="code" id="code1" class="Password">
                               <option value="" selected="">
                                 Code
                               </option>
@@ -2266,7 +2266,7 @@ footer --> */}
                       <div class="field-widget">
                         <i class="fa fa-group" aria-hidden="true"></i>
                         {/* <!-- <input id="Collagename" class="web" type="text" placeholder="Code"> --> */}
-                        <select name="code" id="code">
+                        <select name="code" id="code1">
                           <option selected="">Profile Created For</option>
                           <option value="1">Self</option>
                           <option value="2">Son or Daughter</option>
@@ -2327,7 +2327,7 @@ footer --> */}
               </div>
               <div class="modal-body login-form">
                 <div class="login-1-form clearfix text-center">
-                  <form method="GET" id="modalRegisterForm">
+                  <form method="GET" id="modalRegisterForm1">
                     {/* <div class="login-1-social mt-3 mb-3 text-center clearfix">
                       <ul class="list-inline text-capitalize">
                         <li>
@@ -2345,13 +2345,13 @@ footer --> */}
                     <div class="section-field mb-2">
                       <div class="field-widget">
                         <i class="glyph-icon flaticon-user"></i>
-                        <input id="name" class="web" type="text" placeholder="UserName / Email/ ID" name="web" />
+                        <input id="name1" class="web" type="text" placeholder="UserName / Email/ ID" name="web" />
                       </div>
                     </div>
                     <div class="section-field mb-1">
                       <div class="field-widget">
                         <i class="glyph-icon flaticon-padlock"></i>
-                        <input id="Password" class="Password" type="password" placeholder="Password" name="Password" />
+                        <input id="Password1" class="Password" type="password" placeholder="Password" name="Password" />
                       </div>
                     </div>
                     <div class="section-field text-uppercase">
@@ -2402,7 +2402,7 @@ footer --> */}
                   <div class="section-field mb-2">
                     <div class="field-widget">
                       <i class="fa fa-envelope-o"></i>
-                      <input id="name" class="web" type="text" placeholder="UserName / Email/ ID" name="web" />
+                      <input id="name1" class="web" type="text" placeholder="UserName / Email/ ID" name="web" />
                     </div>
                   </div>
 
