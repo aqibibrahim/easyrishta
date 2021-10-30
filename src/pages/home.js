@@ -1951,7 +1951,7 @@ footer --> */}
           </div>
         </footer>
         {/* <!--Register Modal --> */}
-        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        {/* <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header text-center">
@@ -1967,37 +1967,27 @@ footer --> */}
               </div>
               <div class="modal-body login-form">
                 <div class="login-1-form register-1-form clearfix">
-                  <form method="GET" id="modalRegisterForm1">
+                  <form method="GET" id="user_modalRegisterForm1">
                     <div class="section-field">
                       <div class="field-widget">
                         <i class="glyph-icon flaticon-user"></i>
                         <input id="Username" required name="username" class="web" type="text" placeholder="User Name" />
                       </div>
                     </div>
-                    {/* <!-- <div class="section-field ">
-            <div class="field-widget"> <i class="fa fa-envelope-o" aria-hidden="true"></i>
-              <input id="email" class="email" type="email" placeholder="Email" name="email">
-            </div>
-          </div> --> */}
+
                     <div class="section-field ">
                       <div class="field-widget">
                         <i style={{ transform: "translate(-4px ,-13px)" }} class="glyph-icon flaticon-padlock"></i>
                         <input id="Password1" required class="Password" type="password" placeholder="Password" name="Password" />
                       </div>
                     </div>
-                    {/* <!-- <div class="section-field ">
-            <div class="field-widget"> <i  style="transform: translate(-4px ,-13px);" class="glyph-icon flaticon-padlock"></i>
-              <input id="ConfirmPassword" class="Password" type="password" placeholder="Confirm Password"
-                name="Password">
-            </div>
-          </div> --> */}
+
 
                     <div class="row">
                       <div class="col-5 ">
                         <div class="section-field ">
                           <div class="field-widget">
                             <i class="fa fa-phone" aria-hidden="true"></i>
-                            {/* <!-- <input id="Collagename" class="web" type="text" placeholder="Code"> --> */}
                             <select name="code" id="code1" class="Password">
                               <option value="" selected="">
                                 Code
@@ -2265,7 +2255,6 @@ footer --> */}
                     <div class="section-field ">
                       <div class="field-widget">
                         <i class="fa fa-group" aria-hidden="true"></i>
-                        {/* <!-- <input id="Collagename" class="web" type="text" placeholder="Code"> --> */}
                         <select name="code" id="code1">
                           <option selected="">Profile Created For</option>
                           <option value="1">Self</option>
@@ -2278,16 +2267,6 @@ footer --> */}
                       </div>
                     </div>
 
-                    {/* <!-- <div class="section-field">
-              <div class="field-widget d-flex">
-
-                <input id="termsCheckbox" class="web" type="checkbox" />
-                <span>
-                    I agree to the Terms and Conditions
-                </span>
-
-              </div>
-            </div> --> */}
 
                     <div class="clearfix"></div>
                     <div class="section-field text-uppercase text-right mt-2">
@@ -2312,9 +2291,9 @@ footer --> */}
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* <!--Login Modal --> */}
-        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+        {/* <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -2327,21 +2306,8 @@ footer --> */}
               </div>
               <div class="modal-body login-form">
                 <div class="login-1-form clearfix text-center">
-                  <form method="GET" id="modalRegisterForm1">
-                    {/* <div class="login-1-social mt-3 mb-3 text-center clearfix">
-                      <ul class="list-inline text-capitalize">
-                        <li>
-                          <a class="fb" href="www.google.com">
-                            <i class="fa fa-facebook"></i> Facebook
-                          </a>
-                        </li>
-                        <li>
-                          <a class="gplus" href="www.google.com">
-                            <i class="fa fa-google-plus"></i> google+
-                          </a>
-                        </li>
-                      </ul>
-                    </div> */}
+                  <form method="GET" id="user_modalRegisterForm1">
+
                     <div class="section-field mb-2">
                       <div class="field-widget">
                         <i class="glyph-icon flaticon-user"></i>
@@ -2382,9 +2348,8 @@ footer --> */}
               </div>
             </div>
           </div>
-        </div>
-        {/* <!--Forgot Modal --> */}
-        <div class="modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-hidden="true">
+        </div> */}
+        {/* <div class="modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -2415,7 +2380,6 @@ footer --> */}
                       </span>
                     </button>
                   </div>
-                  {/* <!-- <div class="section-field text-uppercase text-right mt-2"> <a class="button btn-sm btn-colored full-rounded animated right-icn"><span>submit<i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a> </div> --> */}
                   <div class="clearfix"></div>
 
                   <div class="section-field mt-2 text-center text-white">
@@ -2429,7 +2393,7 @@ footer --> */}
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }
