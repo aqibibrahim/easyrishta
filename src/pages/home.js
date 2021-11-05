@@ -11,7 +11,7 @@ import logo3 from "./../../src/pages/images/web-banner5.png";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import ReactModalLogin from "react-modal-login";
+// import ReactModalLogin from "react-modal-login";
 import { facebookConfig, googleConfig } from "../../src/pages/social-config";
 import { auth, db } from "../../src/pages/firebase-config";
 class Home extends React.Component {
@@ -283,7 +283,7 @@ class Home extends React.Component {
                           </button>
                         </li>
                       </ul>
-                      <ReactModalLogin
+                      {/* <ReactModalLogin
                         visible={this.state.showModal}
                         onCloseModal={this.closeModal.bind(this)}
                         loading={this.state.loading}
@@ -399,7 +399,7 @@ class Home extends React.Component {
                             label: "Continue with Google",
                           },
                         }}
-                      />
+                      /> */}
                     </div>
                   </div>
                 </div>
